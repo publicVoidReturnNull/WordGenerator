@@ -31,3 +31,23 @@ REQUIREMENTS
 - Python 3.6 or higher
 - PyTorch (torch)
 - A text file (names.txt) with names, one per line
+
+3orMoreChars.py
+PURPOSE
+WordGenerator is a Python-based neural network project that generates names by predicting the next character based on a sequence of previous characters (e.g., 2, 3, or 4 characters). The model uses a multi-layer perceptron (MLP) with a single hidden layer, trained on a dataset of names (names.txt). It employs PyTorch for tensor operations and matplotlib for visualizing training, validation, and test loss curves.
+The project is inspired by character-level language modeling, extending the idea of bigram models to n-grams (e.g., trigrams, 4-grams) to capture more context when generating names.
+
+REQUIREMENTS
+- Python 3.6 or higher
+- PyTorch (torch)
+- A text file (names.txt) with names, one per line
+
+FEATURES
+- Customizable Context Length: Generate names using the previous numChars characters (e.g., 2, 3, 4, or more).
+- Neural Network: A simple MLP with a configurable hidden layer size, trained using cross-entropy loss and gradient descent.
+- Dataset Splitting: Splits the input dataset into training (80%), validation (10%), and test (10%) sets.
+- Name Generation: Produces new names up to a maximum length (default: 15 characters) using the trained model.
+- Loss Visualization: Plots training, validation, and test loss curves to analyze model performance.
+
+NEXT STEPS
+- Resolve the main issue of overfitting by implementing new techniques that capture relationships between letters, such as embeddings
